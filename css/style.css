@@ -1,0 +1,116 @@
+:root {
+  --secondary: hsl(233, 47%, 7%);
+  --secondary-light: hsl(244, 38%, 16%);
+  --primary: hsl(277, 64%, 61%);
+  --accent: hsl(0, 0%, 100%, 0.75);
+  --neutral: hsl(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+img {
+  display: block;
+  width: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+.card-container {
+  background-color: var(--secondary-light);
+  color: var(--accent);
+  max-width: 1020px;
+}
+.wrapper {
+  display: flex;
+  background-color: var(--secondary-light);
+  border-radius: 7px;
+}
+
+.card-content {
+  padding: 4rem;
+  width: 50%;
+}
+h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1.8rem;
+}
+span {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.card-subtitle {
+  margin-bottom: 2rem;
+  color: var(--neutral);
+}
+.stat-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.num {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.name {
+  text-transform: uppercase;
+  color: var(--neutral);
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+.card-img {
+  background-image: url(/images/image-header-desktop.jpg);
+  background-size: cover;
+  position: relative;
+  border-radius: 0 7px 7px 0;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(182, 132, 238, 0.5);
+}
+/* responsive */
+@media (max-width: 375px) {
+  .card-container {
+    width: 300px;
+    margin: 100px 80px;
+  }
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+  .card-content {
+    width: 100%;
+    text-align: center;
+  }
+  .card-img {
+    width: 300px;
+    height: 300px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+
+  .card-subtitle {
+    font-size: 1rem;
+  }
+  .stat-box {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
